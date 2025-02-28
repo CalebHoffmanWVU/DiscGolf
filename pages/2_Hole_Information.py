@@ -11,10 +11,11 @@ tees = ["B", "Y"]
 baskets = ["B", "Y"]
 bask_white = ["B", "Y", "W"]
 basket_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+basket_number_whites = [1, 2, 5, 13, 14, 16]
 
 hole = st.selectbox('Select a hole', basket_number)
 
-if hole in whites:
+if hole in basket_number_whites:
     tee = st.selectbox("Select a tee", tees)
     basket = st.selectbox("Select a basket", bask_white)
     hole_df = dorseys[[f"Tee {hole}", f"Basket {hole}", f"Hole {hole}"]]
