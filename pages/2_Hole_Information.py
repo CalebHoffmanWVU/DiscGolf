@@ -21,6 +21,7 @@ if hole in whites:
     hole_df = hole_df[hole_df[f"Tee {hole}"] == tee]
     hole_df = hole_df[hole_df[f"Basket {hole}"] == basket]
 
+    hole_df[f"Hole {hole}"] = pd.to_numeric(hole_df[f"Hole {hole}"], errors="coerce")
     times = len(hole_df)
     count_ace = (hole_df[f"Hole {hole}"] == '1').sum()
     count_bird = (hole_df[f"Hole {hole}"] == '2').sum()
@@ -43,6 +44,7 @@ else:
     hole_df = hole_df[hole_df[f"Tee {hole}"] == tee]
     hole_df = hole_df[hole_df[f"Basket {hole}"] == basket]
 
+    hole_df[f"Hole {hole}"] = pd.to_numeric(hole_df[f"Hole {hole}"], errors="coerce")
     times = len(hole_df)
     count_ace = (hole_df[f"Hole {hole}"] == '1').sum()
     count_bird = (hole_df[f"Hole {hole}"] == '2').sum()
