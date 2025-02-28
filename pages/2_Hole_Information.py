@@ -30,6 +30,7 @@ if hole in basket_number_whites:
     count_bogey = (hole_df[f"Hole {hole}"] == 4).sum()
     count_worse = (hole_df[f"Hole {hole}"] >= 5).sum()
     average = hole_df[f"Hole {hole}"].mean()
+    average = round(average, 2)
 
     st.write("You have played this hole", times, "times")
     st.write("You have aced this hole", count_ace, "times")
@@ -53,6 +54,7 @@ else:
     count_bogey = (hole_df[f"Hole {hole}"] == 4).sum()
     count_worse = (hole_df[f"Hole {hole}"] >= 5).sum()
     average = hole_df[f"Hole {hole}"].mean()
+    average = round(average, 2)
 
     st.write("You have played this hole", times, "times")
     st.write("You have aced this hole", count_ace, "times")
