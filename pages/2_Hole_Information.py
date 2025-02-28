@@ -23,11 +23,11 @@ if hole in whites:
 
     hole_df[f"Hole {hole}"] = pd.to_numeric(hole_df[f"Hole {hole}"], errors="coerce")
     times = len(hole_df)
-    count_ace = (hole_df[f"Hole {hole}"] == '1').sum()
-    count_bird = (hole_df[f"Hole {hole}"] == '2').sum()
-    count_par = (hole_df[f"Hole {hole}"] == '3').sum()
-    count_bogey = (hole_df[f"Hole {hole}"] == '4').sum()
-    count_worse = (hole_df[f"Hole {hole}"] >= '5').sum()
+    count_ace = (hole_df[f"Hole {hole}"] == 1).sum()
+    count_bird = (hole_df[f"Hole {hole}"] == 2).sum()
+    count_par = (hole_df[f"Hole {hole}"] == 3).sum()
+    count_bogey = (hole_df[f"Hole {hole}"] == 4).sum()
+    count_worse = (hole_df[f"Hole {hole}"] >= 5).sum()
     average = hole_df[f"Hole {hole}"].mean()
 
     st.write("You have played this hole", times, "times")
@@ -46,11 +46,11 @@ else:
 
     hole_df[f"Hole {hole}"] = pd.to_numeric(hole_df[f"Hole {hole}"], errors="coerce")
     times = len(hole_df)
-    count_ace = (hole_df[f"Hole {hole}"] == '1').sum()
-    count_bird = (hole_df[f"Hole {hole}"] == '2').sum()
-    count_par = (hole_df[f"Hole {hole}"] == '3').sum()
-    count_bogey = (hole_df[f"Hole {hole}"] == '4').sum()
-    count_worse = (hole_df[f"Hole {hole}"] >= '5').sum()
+    count_ace = (hole_df[f"Hole {hole}"] == 1).sum()
+    count_bird = (hole_df[f"Hole {hole}"] == 2).sum()
+    count_par = (hole_df[f"Hole {hole}"] == 3).sum()
+    count_bogey = (hole_df[f"Hole {hole}"] == 4).sum()
+    count_worse = (hole_df[f"Hole {hole}"] >= 5).sum()
     average = hole_df[f"Hole {hole}"].mean()
 
     st.write("You have played this hole", times, "times")
